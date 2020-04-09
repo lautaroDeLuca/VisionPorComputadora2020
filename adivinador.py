@@ -11,13 +11,14 @@ def adivinar(intentos,guess):
         else: 
             if guess != number:
                 print("Te quedaste sin intentos")
+                print("La respuesta correcta era: " , number)
                 intentos = False
     return intentos
 
 def adivinador():
-    tries = 3
+    tries = int(input("Deberá adivinar un numero del 0 al 100, indique cuantos intentos quiere: "))
     while tries:
-        number = int(input('Ingrese el numero: '))
+        number = int(input('Ingrese un numero del 0 al 100: '))  
         tries = adivinar(tries, number)
     return
 
